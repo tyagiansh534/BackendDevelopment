@@ -1,0 +1,14 @@
+{
+  "name": "backend25-exp12b",
+  "version": "1.0.0",
+  "description": "Experiment 12B State Management",
+  "main": "session-example.js",
+  "scripts": {
+    "start": "node session-example.js"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3"
+  }
+}

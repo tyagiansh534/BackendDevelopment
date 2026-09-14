@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Result</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+    .result-card {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      border-top: 4px solid #4CAF50;
+    }
+    h2 {
+      color: #333;
+      margin-top: 0;
+    }
+    .info-group {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #eee;
+    }
+    .info-group:last-child {
+      border-bottom: none;
+    }
+    .label {
+      display: block;
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 5px;
+    }
+    .value {
+      font-size: 18px;
+      color: #333;
+      font-weight: bold;
+    }
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #f1f1f1;
+      color: #333;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    .back-link:hover {
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div class="result-card">
+    <h2>Registration Successful!</h2>
+    <p>Thank you for registering. Here are the details you submitted:</p>
+    
+    <div class="info-group">
+      <span class="label">Full Name</span>
+      <span class="value"><%= student.name %></span>
+    </div>
+    
+    <div class="info-group">
+      <span class="label">Email Address</span>
+      <span class="value"><%= student.email %></span>
+    </div>
+    
+    <div class="info-group">
+      <span class="label">Course</span>
+      <span class="value"><%= student.course %></span>
+    </div>
+    
+    <div class="info-group">
+      <span class="label">Semester</span>
+      <span class="value"><%= student.semester %></span>
+    </div>
+    
+    <a href="/student/register" class="back-link">&larr; Register Another Student</a>
+  </div>
+</body>
+</html>
