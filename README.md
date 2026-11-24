@@ -37,3 +37,11 @@
 - **[L05-RESTful-APIs-FastAPI](Theory/L05-RESTful-APIs-FastAPI/README.md)** ([📄 README](Theory/L05-RESTful-APIs-FastAPI/README.md)): RESTful Student and Course Management APIs built with Python FastAPI, Pydantic data validation, and Uvicorn.
 - **[L06-Session-Control](Theory/L06-Session-Control/README.md)** ([📄 README](Theory/L06-Session-Control/README.md)): In-depth implementations of Express.js Sessions, Cookies, and Query Parameters.
 - **[L07-Web-Storage](Theory/L07-Web-Storage/README.md)** ([📄 README](Theory/L07-Web-Storage/README.md)): Comprehensive guide and code examples for `localStorage`, `sessionStorage`, JSON serialization, and interactive Notes Web App.
+- **[Lecture 8](Theory/Lecture%208/README.md)** ([📄 README](Theory/Lecture%208/README.md)): Server-Side Rendering and static content across Node.js/Express EJS and FastAPI Jinja2.
+- **[Lecture 13](Theory/Lecture%2013/README.md)** ([📄 README](Theory/Lecture%2013/README.md)): Relational and NoSQL Databases (PostgreSQL student schema, MongoDB queries, and SQL vs NoSQL analysis).
+- **[Lecture 14](Theory/Lecture%2014/README.md)** ([📄 README](Theory/Lecture%2014/README.md)): Database Design and Normalization (Library ER model and 1NF, 2NF, 3NF Orders decomposition).
+- **[Lecture 15](Theory/Lecture%2015/README.md)** ([📄 README](Theory/Lecture%2015/README.md)): ORM, MongoDB, and Data Validation (Embedding vs Referencing, Mongoose schemas, virtuals, and validators).
+- **[Lecture 26](Theory/Lecture%2026/README.md)** ([📄 README](Theory/Lecture%2026/README.md)): Django Student Management System API with RESTful endpoints, migrations, and SQLite.
+- **[docker-bind](Theory/docker-bind/README.md)** ([📄 README](Theory/docker-bind/README.md)): Docker Bind Mount demonstration for live host-to-container filesystem synchronization.
+- **[docker-build](Theory/docker-build/README.md)** ([📄 README](Theory/docker-build/README.md)): Custom Dockerfile building and Docker Compose orchestration for an Nginx web server.
+- **[express-project](Theory/express-project/README.md)** ([📄 README](Theory/express-project/README.md)): Standalone Express.js boilerplate setup with logging middleware and REST endpoints.
