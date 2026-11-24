@@ -1,0 +1,8 @@
+{
+  "students": [
+    { "id": 201, "name": "Aditya Rao", "course": "B.Tech CSE", "marks": 92, "city": "Dehradun" },
+    { "id": 202, "name": "Ananya Gupta", "course": "B.Tech CSE", "marks": 88, "city": "Delhi" },
+    { "id": 203, "name": "Rohan Malhotra", "course": "B.Tech IT", "marks": 85, "city": "Chandigarh" },
+    { "id": 204, "name": "Sanya Kapoor", "course": "B.Tech AI & ML", "marks": 95, "city": "Mumbai" }
+  ]
+}

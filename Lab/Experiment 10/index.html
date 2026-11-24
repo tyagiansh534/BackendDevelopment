@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 10: jQuery Programs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Experiment 10: Familiarization with jQuery</h1>
+            <p class="subtitle">Demonstrating jQuery DOM Manipulation, Effects, and Asynchronous AJAX.</p>
+        </header>
+
+        <!-- Program 1: DOM Manipulation & Effects -->
+        <section class="card">
+            <h2>Program 1: jQuery DOM Selectors, Manipulation & Effects</h2>
+            <p>Interactive manipulation of classes, CSS properties, text content, and animations using jQuery.</p>
+            
+            <div class="demo-box" id="targetBox">
+                <span id="boxText">Interactive Box</span>
+            </div>
+
+            <div class="btn-group">
+                <button id="btnToggleClass">Toggle Highlight</button>
+                <button id="btnFade">Fade In / Out</button>
+                <button id="btnSlide">Slide Toggle</button>
+                <button id="btnChangeText">Change Content</button>
+                <button id="btnAppend">Append Element</button>
+                <button id="btnResetBox">Reset Box</button>
+            </div>
+
+            <div id="p1Feedback" class="feedback">Click buttons to test jQuery actions.</div>
+        </section>
+
+        <!-- Program 2: jQuery AJAX -->
+        <section class="card">
+            <h2>Program 2: jQuery Asynchronous HTTP ($.ajax & $.getJSON)</h2>
+            <p>Fetching and rendering remote student records using <code>$.ajax()</code> with loading and error handling.</p>
+
+            <div class="btn-group">
+                <button id="btnLoadAjax" class="btn-primary">Execute $.ajax()</button>
+                <button id="btnLoadGetJson" class="btn-secondary">Execute $.getJSON()</button>
+                <button id="btnTriggerError" class="btn-danger">Simulate 404 Error</button>
+                <button id="btnClearTable">Clear Table</button>
+            </div>
+
+            <div id="ajaxStatus" class="feedback">Ready for jQuery AJAX request.</div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Course</th>
+                        <th>Marks</th>
+                        <th>City</th>
+                    </tr>
+                </thead>
+                <tbody id="studentTableBody">
+                    <tr><td colspan="5" style="text-align:center; color:#94a3b8;">No records loaded.</td></tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <!-- jQuery CDN with fallback -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

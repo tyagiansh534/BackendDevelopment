@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 09: Asynchronous Data Exchange Using AJAX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Experiment 09: AJAX with JSON, XML and HTML</h1>
+        <p class="desc">Asynchronous JavaScript and XML (AJAX) data retrieval using the modern Fetch API.</p>
+
+        <div class="btn-group">
+            <button id="loadJsonBtn" class="btn-json">Fetch JSON Students</button>
+            <button id="loadXmlBtn" class="btn-xml">Fetch XML Students</button>
+            <button id="loadHtmlBtn" class="btn-html">Fetch HTML Notice</button>
+        </div>
+
+        <div id="status" class="status">Click any button above to make an asynchronous HTTP request.</div>
+
+        <table id="studentTableContainer">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Course</th>
+                    <th>Semester</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody id="studentTable">
+                <tr>
+                    <td colspan="5" style="text-align:center; color:#94a3b8;">No records loaded yet.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div id="htmlNoticeContainer" style="display: none;"></div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

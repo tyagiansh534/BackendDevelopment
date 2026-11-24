@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+    <student id="101">
+        <name>Aarav Sharma</name>
+        <course>B.Tech CSE</course>
+        <semester>V</semester>
+        <gpa>8.9</gpa>
+        <email>aarav.sharma@example.com</email>
+        <status>Active</status>
+    </student>
+    <student id="102">
+        <name>Meera Patel</name>
+        <course>B.Tech IT</course>
+        <semester>V</semester>
+        <gpa>9.2</gpa>
+        <email>meera.patel@example.com</email>
+        <status>Active</status>
+    </student>
+    <student id="103">
+        <name>Kabir Singh</name>
+        <course>B.Tech CSE</course>
+        <semester>VII</semester>
+        <gpa>7.8</gpa>
+        <email>kabir.singh@example.com</email>
+        <status>Active</status>
+    </student>
+    <student id="104">
+        <name>Riya Sen</name>
+        <course>B.Tech AI &amp; ML</course>
+        <semester>V</semester>
+        <gpa>9.5</gpa>
+        <email>riya.sen@example.com</email>
+        <status>Active</status>
+    </student>
+    <student id="105">
+        <name>Devansh Verma</name>
+        <course>B.Tech Cloud Computing</course>
+        <semester>VII</semester>
+        <gpa>8.4</gpa>
+        <email>devansh.verma@example.com</email>
+        <status>Graduated</status>
+    </student>
+</students>

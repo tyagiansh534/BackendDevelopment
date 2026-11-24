@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Portal | Experiment 11</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-brand">
+            <span class="logo-icon">🎓</span>
+            <span class="logo-text">SoCS Portal</span>
+        </div>
+        <nav class="nav-links">
+            <button class="nav-tab active" data-tab="students">Students Directory</button>
+            <button class="nav-tab" data-tab="courses">Courses Catalog</button>
+            <button class="nav-tab" data-tab="about">About & Architecture</button>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <!-- TAB 1: STUDENTS -->
+        <section id="tab-students" class="tab-pane active">
+            <div class="header-actions">
+                <div>
+                    <h1>Student Directory</h1>
+                    <p class="subtitle">Asynchronously fetched and dynamically filtered with AJAX.</p>
+                </div>
+                <div class="source-toggles">
+                    <span>Data Source:</span>
+                    <button id="btnSrcJson" class="toggle-btn active">JSON</button>
+                    <button id="btnSrcXml" class="toggle-btn">XML</button>
+                </div>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="stats-row">
+                <div class="stat-card">
+                    <span class="stat-label">Total Records</span>
+                    <span id="statTotal" class="stat-value">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Average GPA</span>
+                    <span id="statGpa" class="stat-value">0.0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Active Enrollments</span>
+                    <span id="statActive" class="stat-value">0</span>
+                </div>
+            </div>
+
+            <!-- Filter Controls -->
+            <div class="controls-bar">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search by name, ID, or email...">
+                </div>
+                <div class="filter-box">
+                    <select id="courseFilter">
+                        <option value="ALL">All Courses</option>
+                        <option value="B.Tech CSE">B.Tech CSE</option>
+                        <option value="B.Tech IT">B.Tech IT</option>
+                        <option value="B.Tech AI & ML">B.Tech AI & ML</option>
+                        <option value="B.Tech Cloud Computing">B.Tech Cloud Computing</option>
+                    </select>
+                </div>
+                <button id="btnRefresh" class="btn-refresh">↻ Reload Data</button>
+            </div>
+
+            <div id="statusAlert" class="status-alert">Initialising student data via AJAX...</div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Student Name</th>
+                            <th>Department</th>
+                            <th>Semester</th>
+                            <th>GPA</th>
+                            <th>Email</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentTbody">
+                        <tr><td colspan="7" style="text-align:center;">Loading records...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- TAB 2: COURSES -->
+        <section id="tab-courses" class="tab-pane">
+            <div class="header-actions">
+                <div>
+                    <h1>Department Courses</h1>
+                    <p class="subtitle">Loaded on-demand from <code>courses.json</code> via AJAX Fetch API.</p>
+                </div>
+                <button id="btnLoadCourses" class="toggle-btn active">Refresh Courses</button>
+            </div>
+
+            <div id="courseStatus" class="status-alert">Ready to load courses.</div>
+            <div id="coursesGrid" class="courses-grid"></div>
+        </section>
+
+        <!-- TAB 3: ABOUT -->
+        <section id="tab-about" class="tab-pane">
+            <div class="card-detail">
+                <h2>Experiment 11: Asynchronous Architecture</h2>
+                <p>This web application combines modern <strong>HTML5, CSS3, JavaScript (ES6+), and AJAX</strong> to demonstrate a decoupled single-page application model:</p>
+                <ul>
+                    <li><strong>Decoupled Presentation & Data:</strong> The frontend layout renders instantly while data payloads (JSON and XML) are loaded over HTTP without page refreshes.</li>
+                    <li><strong>Dual Format Support:</strong> Demonstrates real-time switching between native JSON deserialization (`response.json()`) and XML Document Object traversal (`DOMParser`).</li>
+                    <li><strong>Client-Side Processing:</strong> In-memory filtering and multi-criteria searching without redundant network overhead.</li>
+                    <li><strong>Graceful Error Handling:</strong> Intercepts network disruptions, HTTP 404/500 errors, and provides user feedback alerts.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Backend Development Laboratory (CSFS3008P) | Ansh Tyagi (SAP ID: 590014867)</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

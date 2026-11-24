@@ -11,6 +11,9 @@
 - **Experiment -1:** Basic HTML portfolio & assignment page.
 - **Experiment 07:** Programs to familiarise ES6 concepts (let/const, arrow functions, template literals, destructuring, spread/rest, default parameters, classes, modules, promises/async-await).
 - **Experiment 08:** Programs to demonstrate DOM and event handling (DOM element selection, modification, styles, traversal, event listeners, bubbling, delegation, and interactive To-Do application).
+- **Experiment 09:** Programs using AJAX with HTML, XML and JSON data (Fetch API, DOMParser, dynamic partial rendering).
+- **Experiment 10:** Programs to familiarize jQuery (DOM selectors, styling, animations/effects, and $.ajax / $.getJSON asynchronous retrieval).
+- **Experiment 11:** Interactive Academic Portal website built with HTML5, CSS3, JavaScript and AJAX (dual JSON/XML source toggling, live client-side search & filtering, on-demand course catalogs).
 - **Experiment 12 - A:** Express.js MVC web application with EJS view templating (Home, Users, Profile, Register, Results, Timetable).
 - **Experiment 12 - B:** Express.js Session & Cookie management examples and Todo application.
 - **Experiment 13 - A:** Express.js & MongoDB / Mongoose User Management System (Schema design, CRUD operations, Signup, and Login).

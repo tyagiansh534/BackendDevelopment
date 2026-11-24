@@ -1,0 +1,9 @@
+{
+  "students": [
+    { "id": 101, "name": "Aarav Sharma", "course": "B.Tech CSE", "semester": "V", "email": "aarav.sharma@example.com" },
+    { "id": 102, "name": "Meera Patel", "course": "B.Tech IT", "semester": "V", "email": "meera.patel@example.com" },
+    { "id": 103, "name": "Kabir Singh", "course": "B.Tech CSE", "semester": "VII", "email": "kabir.singh@example.com" },
+    { "id": 104, "name": "Riya Sen", "course": "B.Tech AI & ML", "semester": "V", "email": "riya.sen@example.com" },
+    { "id": 105, "name": "Devansh Verma", "course": "B.Tech Cloud Computing", "semester": "VII", "email": "devansh.verma@example.com" }
+  ]
+}

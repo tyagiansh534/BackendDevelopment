@@ -1,0 +1,124 @@
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --bg: #f8fafc;
+    --card-bg: #ffffff;
+    --text: #0f172a;
+    --text-muted: #64748b;
+    --border: #e2e8f0;
+    --success: #16a34a;
+    --error: #dc2626;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+}
+.navbar {
+    background: #ffffff;
+    border-bottom: 1px solid var(--border);
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+}
+.nav-brand { font-size: 1.2rem; font-weight: 700; color: var(--primary); display: flex; align-items: center; gap: 8px; }
+.nav-links { display: flex; gap: 8px; }
+.nav-tab {
+    background: transparent;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-muted);
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+.nav-tab:hover { background: #f1f5f9; color: var(--text); }
+.nav-tab.active { background: #eff6ff; color: var(--primary); font-weight: 600; }
+.main-content { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+.tab-pane { display: none; }
+.tab-pane.active { display: block; }
+.header-actions { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 20px; }
+h1 { margin: 0 0 4px 0; font-size: 1.8rem; }
+.subtitle { margin: 0; color: var(--text-muted); font-size: 0.95rem; }
+.source-toggles { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 500; }
+.toggle-btn {
+    border: 1px solid var(--border);
+    background: white;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+.toggle-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+.stats-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px; }
+.stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
+.stat-label { font-size: 12px; font-weight: 600; text-transform: uppercase; color: var(--text-muted); display: block; }
+.stat-value { font-size: 24px; font-weight: 700; color: var(--primary); margin-top: 4px; display: block; }
+.controls-bar {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+.search-box { flex: 1; min-width: 250px; }
+input[type="text"], select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 14px;
+    background: white;
+}
+.btn-refresh {
+    background: #f1f5f9;
+    border: 1px solid var(--border);
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+}
+.btn-refresh:hover { background: #e2e8f0; }
+.status-alert {
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    margin-bottom: 16px;
+    background: #eff6ff;
+    border-left: 4px solid var(--primary);
+    color: #1e40af;
+}
+.table-container { background: white; border: 1px solid var(--border); border-radius: 8px; overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); }
+th { background: #f8fafc; color: var(--text-muted); font-weight: 600; }
+tr:hover { background: #f8fafc; }
+.badge { display: inline-block; padding: 3px 8px; border-radius: 12px; font-size: 11px; font-weight: 600; }
+.badge-active { background: #dcfce7; color: #166534; }
+.badge-grad { background: #e2e8f0; color: #475569; }
+.courses-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 16px; }
+.course-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+}
+.course-card h3 { margin: 0 0 8px 0; color: var(--primary); font-size: 1.15rem; }
+.course-card p { margin: 4px 0; font-size: 13px; color: var(--text-muted); }
+.card-detail { background: white; border: 1px solid var(--border); border-radius: 8px; padding: 24px; }
+.footer { text-align: center; margin-top: 50px; padding: 24px 0; font-size: 13px; color: var(--text-muted); border-top: 1px solid var(--border); }
