@@ -20,6 +20,7 @@
 
 ### 📚 Theory Lectures & Assignments (`theory/`)
 - **Assignment-1-Notes-Manager:** Full-featured browser-based Notes Manager using `localStorage`, dynamic DOM rendering, editing, and filtering.
+- **Assignment-2-PostgreSQL-JSONB:** Comprehensive implementation and analysis of PostgreSQL as SQL + NoSQL using `jsonb` (hybrid schemas, GIN indexing, containment queries, updates, and MongoDB comparisons).
 - **L01-Node.js-Basics:**
   - `Task-1-Hello-World`: Native Node.js HTTP server.
   - `Task-2-Multiple-Routes`: Multi-route HTTP server.
