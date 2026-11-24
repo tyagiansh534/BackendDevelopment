@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 05: JavaScript Arrays, Objects & Functions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <h1>Experiment 05: JavaScript Arrays, Objects & Functions</h1>
+        <p class="subtitle">Author: Ansh Tyagi | SAP ID: 590014867 | Course Outcome: CO2</p>
+    </header>
+
+    <main class="container">
+        <!-- Section 1: Interactive Console View -->
+        <section class="card">
+            <h2>Live JavaScript Console Output</h2>
+            <p>Click below to execute each script and see real-time output rendered below (and in DevTools console F12).</p>
+            <div class="btn-group">
+                <button onclick="runTask1()">Run Task 1 (Basics)</button>
+                <button onclick="runTask2()">Run Task 2 (Advanced Methods)</button>
+                <button onclick="runLibraryPBL()">Run Library PBL Utility</button>
+                <button onclick="clearConsole()" class="btn-clear">Clear Output</button>
+            </div>
+            <pre id="consoleOut" class="console-box">Click a button above to run script...</pre>
+        </section>
+
+        <!-- Section 2: Interactive Library Management Demo -->
+        <section class="card">
+            <h2>Interactive Library Manager (PBL Activity)</h2>
+            <div class="lib-form">
+                <input type="text" id="bookTitle" placeholder="Book Title (e.g. You Don't Know JS)">
+                <input type="text" id="bookAuthor" placeholder="Author (e.g. Kyle Simpson)">
+                <button onclick="uiAddBook()">+ Add Book</button>
+            </div>
+
+            <div class="lib-search">
+                <input type="text" id="searchTitle" placeholder="Search book by title...">
+                <button onclick="uiSearchBook()">🔍 Search</button>
+                <span id="searchResult" class="search-feedback"></span>
+            </div>
+
+            <ul id="bookList" class="book-list"></ul>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="script2.js"></script>
+    <script src="library.js"></script>
+
+    <script>
+        const out = document.getElementById("consoleOut");
+
+        function logToBox(text) {
+            out.textContent += text + "\n";
+            out.scrollTop = out.scrollHeight;
+        }
+
+        function clearConsole() {
+            out.textContent = "";
+        }
+
+        function runTask1() {
+            clearConsole();
+            logToBox("=== Running Task 1: script.js ===");
+            logToBox("Array: [" + fruits.join(", ") + "]");
+            logToBox("Object: Name=" + student.name + ", Course=" + student.course + ", SAP ID=" + student.sapId);
+            logToBox("Function Greet: " + greet(student.name));
+        }
+
+        function runTask2() {
+            clearConsole();
+            logToBox("=== Running Task 2: script2.js ===");
+            logToBox("Original String: " + str);
+            logToBox("Upper Case: " + str.toUpperCase());
+            logToBox("Lower Case: " + str.toLowerCase());
+            logToBox("Split: " + JSON.stringify(str.split(" ")));
+            logToBox("Array Items: " + JSON.stringify(items));
+            logToBox("Object User: " + JSON.stringify(user));
+        }
+
+        function runLibraryPBL() {
+            clearConsole();
+            logToBox("=== Running Library PBL Activity: library.js ===");
+            library.forEach((b, i) => {
+                logToBox(`${i+1}. "${b.title}" by ${b.author} [${b.available ? 'Available' : 'Issued'}]`);
+            });
+            logToBox("Total Books in Catalog: " + library.length);
+        }
+
+        function renderUIBooks() {
+            const list = document.getElementById("bookList");
+            list.innerHTML = "";
+            library.forEach((b, idx) => {
+                const li = document.createElement("li");
+                li.innerHTML = `<span><strong>${b.title}</strong> by ${b.author}</span> <span class="badge ${b.available ? 'badge-ok' : ''}">${b.available ? 'Available' : 'Issued'}</span>`;
+                list.appendChild(li);
+            });
+        }
+
+        function uiAddBook() {
+            const title = document.getElementById("bookTitle").value;
+            const author = document.getElementById("bookAuthor").value;
+            if (addBook(title, author)) {
+                document.getElementById("bookTitle").value = "";
+                document.getElementById("bookAuthor").value = "";
+                renderUIBooks();
+                runLibraryPBL();
+            }
+        }
+
+        function uiSearchBook() {
+            const title = document.getElementById("searchTitle").value;
+            const res = findBook(title);
+            const feedback = document.getElementById("searchResult");
+            if (res) {
+                feedback.className = "search-feedback found";
+                feedback.textContent = `Found: "${res.title}" by ${res.author}`;
+            } else {
+                feedback.className = "search-feedback not-found";
+                feedback.textContent = `"${title}" was not found.`;
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            renderUIBooks();
+            runTask1();
+        });
+    </script>
+</body>
+</html>

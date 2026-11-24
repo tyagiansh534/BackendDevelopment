@@ -9,6 +9,7 @@
 
 ### 🧪 Lab Experiments (`Lab/`)
 - **[Experiment -1](Lab/Experiment%20-1/README.md)** ([📄 README](Lab/Experiment%20-1/README.md)): Basic HTML portfolio & assignment page.
+- **[Experiment 05](Lab/Experiment%2005/README.md)** ([📄 README](Lab/Experiment%2005/README.md)): Programs to demonstrate JavaScript array, object and functions (String/Array/Object manipulation methods and in-memory Library Management PBL utility).
 - **[Experiment 07](Lab/Experiment%2007/README.md)** ([📄 README](Lab/Experiment%2007/README.md)): Programs to familiarise ES6 concepts (let/const, arrow functions, template literals, destructuring, spread/rest, default parameters, classes, modules, promises/async-await).
 - **[Experiment 08](Lab/Experiment%2008/README.md)** ([📄 README](Lab/Experiment%2008/README.md)): Programs to demonstrate DOM and event handling (DOM element selection, modification, styles, traversal, event listeners, bubbling, delegation, and interactive To-Do application).
 - **[Experiment 09](Lab/Experiment%2009/README.md)** ([📄 README](Lab/Experiment%2009/README.md)): Programs using AJAX with HTML, XML and JSON data (Fetch API, DOMParser, dynamic partial rendering).
