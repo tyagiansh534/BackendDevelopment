@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 Modules (import / export)</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 650px; margin: 40px auto; line-height: 1.6; padding: 0 20px; }
+        pre { background: #f4f4f4; padding: 15px; border-radius: 6px; border-left: 4px solid #007acc; }
+        .note { background: #e7f3fe; border-left: 4px solid #2196f3; padding: 10px 15px; margin-top: 15px; }
+    </style>
+</head>
+<body>
+    <h1>Experiment 07 & 08: Part A - 3.8 Modules</h1>
+    <p>This page loads <code>main.js</code> using <code>&lt;script type="module" src="main.js"&gt;&lt;/script&gt;</code> which imports from <code>math.js</code>.</p>
+    
+    <h3>Console Output:</h3>
+    <pre id="output">Loading module...</pre>
+
+    <div class="note">
+        <strong>Note for VS Code:</strong> You can also run this directly in VS Code's terminal using:
+        <br><code>node main.js</code>
+    </div>
+
+    <script type="module">
+        import multiply, { PI, add } from './math.js';
+        const resultText = `PI: ${PI}\nadd(2, 3): ${add(2, 3)}\nmultiply(4, 5): ${multiply(4, 5)}`;
+        console.log("PI:", PI);
+        console.log("add(2, 3):", add(2, 3));
+        console.log("multiply(4, 5):", multiply(4, 5));
+        document.getElementById('output').textContent = resultText;
+    </script>
+</body>
+</html>

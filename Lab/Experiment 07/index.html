@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part A: ES6 Features Demo</title>
+    <style>
+        body { font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin: 30px auto; padding: 0 20px; line-height: 1.6; background-color: #f9f9fb; color: #333; }
+        h1, h2 { color: #1e3a8a; }
+        .section-card { background: white; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.06); border: 1px solid #e5e7eb; }
+        button { background: #2563eb; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 14px; margin-top: 8px; }
+        button:hover { background: #1d4ed8; }
+        pre { background: #1e293b; color: #f8fafc; padding: 12px; border-radius: 6px; overflow-x: auto; font-size: 13px; }
+        .output { background: #f1f5f9; border-left: 4px solid #2563eb; padding: 10px; margin-top: 10px; font-family: monospace; white-space: pre-wrap; font-size: 14px; min-height: 24px; color: #0f172a; }
+        .back-link { display: inline-block; margin-bottom: 20px; color: #2563eb; text-decoration: none; font-weight: bold; }
+        .back-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    
+    <h1>Experiment 07 & 08: Part A - ES6 (ECMAScript 2015)</h1>
+    <p>Click the buttons below to run each ES6 demonstration, or open and run the corresponding <code>.js</code> files in VS Code via terminal using <code>node &lt;filename&gt;.js</code>.</p>
+
+    <!-- 3.1 -->
+    <div class="section-card">
+        <h2>3.1 let and const</h2>
+        <pre><code>// var — function-scoped, can be redeclared
+var x = 10;
+var x = 20;
+
+// let — block-scoped, cannot be redeclared
+let y = 10;
+
+// const — block-scoped, cannot be reassigned
+const z = 30;
+
+// Block scope
+if (true) {
+    let blockVar = "inside";
+    var funcVar = "outside";
+}</code></pre>
+        <button onclick="runLetConst()">Run 3.1</button>
+        <div id="out-let-const" class="output">Click "Run 3.1" to execute...</div>
+    </div>
+
+    <!-- 3.2 -->
+    <div class="section-card">
+        <h2>3.2 Arrow Functions</h2>
+        <pre><code>const add = (a, b) => a + b;
+const square = x => x * x;
+const greet = () => "Hello!";
+const multiply = (a, b) => {
+    const result = a * b;
+    return result;
+};</code></pre>
+        <button onclick="runArrowFunctions()">Run 3.2</button>
+        <div id="out-arrow" class="output">Click "Run 3.2" to execute...</div>
+    </div>
+
+    <!-- 3.3 -->
+    <div class="section-card">
+        <h2>3.3 Template Literals</h2>
+        <pre><code>const name = "Alice";
+const age = 25;
+const msg = `Hello, ${name}! You are ${age} years old.`;
+console.log(`Sum: ${5 + 3}`);
+console.log(`Upper: ${name.toUpperCase()}`);</code></pre>
+        <button onclick="runTemplateLiterals()">Run 3.3</button>
+        <div id="out-template" class="output">Click "Run 3.3" to execute...</div>
+    </div>
+
+    <!-- 3.4 -->
+    <div class="section-card">
+        <h2>3.4 Destructuring</h2>
+        <pre><code>const colors = ["red", "green", "blue"];
+const [first, second, third] = colors;
+const [, , thirdColor] = colors;
+
+const person = { name: "Bob", age: 30, city: "Mumbai" };
+const { name, age } = person;
+const { name: fullName } = person;
+const { country = "India" } = person;</code></pre>
+        <button onclick="runDestructuring()">Run 3.4</button>
+        <div id="out-destruct" class="output">Click "Run 3.4" to execute...</div>
+    </div>
+
+    <!-- 3.5 -->
+    <div class="section-card">
+        <h2>3.5 Spread and Rest Operators (...)</h2>
+        <pre><code>const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+const combined = [...arr1, ...arr2];
+
+const obj1 = { a: 1, b: 2 };
+const obj2 = { ...obj1, c: 3 };
+
+function sum(...numbers) {
+    return numbers.reduce((total, n) => total + n, 0);
+}
+const [head, ...tail] = [10, 20, 30, 40];</code></pre>
+        <button onclick="runSpreadRest()">Run 3.5</button>
+        <div id="out-spread" class="output">Click "Run 3.5" to execute...</div>
+    </div>
+
+    <!-- 3.6 -->
+    <div class="section-card">
+        <h2>3.6 Default Parameters</h2>
+        <pre><code>function greet(name = "Guest", greeting = "Hello") {
+    return `${greeting}, ${name}!`;
+}</code></pre>
+        <button onclick="runDefaultParams()">Run 3.6</button>
+        <div id="out-default" class="output">Click "Run 3.6" to execute...</div>
+    </div>
+
+    <!-- 3.7 -->
+    <div class="section-card">
+        <h2>3.7 Classes</h2>
+        <pre><code>class Animal {
+    constructor(name, sound) {
+        this.name = name;
+        this.sound = sound;
+    }
+    speak() { return `${this.name} says ${this.sound}`; }
+    static info() { return "Animals are living beings."; }
+}
+
+class Dog extends Animal {
+    constructor(name) { super(name, "Woof"); }
+    fetch() { return `${this.name} is fetching the ball.`; }
+}</code></pre>
+        <button onclick="runClasses()">Run 3.7</button>
+        <div id="out-classes" class="output">Click "Run 3.7" to execute...</div>
+    </div>
+
+    <!-- 3.8 -->
+    <div class="section-card">
+        <h2>3.8 Modules (import / export)</h2>
+        <p>Demonstrates splitting code into <code>math.js</code> and importing in <code>main.js</code>.</p>
+        <a href="08_modules/index.html" style="color: #2563eb; font-weight: bold;">Open Dedicated Modules Page &rarr;</a>
+    </div>
+
+    <!-- 3.9 -->
+    <div class="section-card">
+        <h2>3.9 Promises and Async/Await</h2>
+        <pre><code>const fetchData = () => {
+    return new Promise((resolve) => setTimeout(() => resolve("Data loaded"), 1000));
+};
+
+async function loadData() {
+    const data = await fetchData();
+    console.log(data);
+}</code></pre>
+        <button onclick="runPromises()">Run 3.9</button>
+        <div id="out-promises" class="output">Click "Run 3.9" to execute...</div>
+    </div>
+
+    <!-- 3.10 -->
+    <div class="section-card">
+        <h2>3.10 Enhanced Object Literals</h2>
+        <pre><code>const name = "Alice";
+const age = 25;
+const person = { name, age };
+const calculator = {
+    add(a, b) { return a + b; },
+    subtract(a, b) { return a - b; }
+};
+const key = "dynamicKey";
+const obj = { [key]: "value" };</code></pre>
+        <button onclick="runEnhancedObjects()">Run 3.10</button>
+        <div id="out-objects" class="output">Click "Run 3.10" to execute...</div>
+    </div>
+
+    <script>
+        function runLetConst() {
+            var x = 10;
+            var x = 20;
+            let y = 10;
+            const z = 30;
+            let blockVar = "";
+            var funcVar = "";
+            if (true) {
+                blockVar = "inside";
+                funcVar = "outside";
+            }
+            document.getElementById('out-let-const').textContent = 
+                `var x = ${x}\nlet y = ${y}\nconst z = ${z}\nblockVar inside block = "${blockVar}"\nfuncVar outside block = "${funcVar}"`;
+        }
+
+        function runArrowFunctions() {
+            const add = (a, b) => a + b;
+            const square = x => x * x;
+            const greet = () => "Hello!";
+            const multiply = (a, b) => a * b;
+            document.getElementById('out-arrow').textContent = 
+                `add(3, 4) = ${add(3, 4)}\nsquare(5) = ${square(5)}\ngreet() = "${greet()}"\nmultiply(4, 5) = ${multiply(4, 5)}`;
+        }
+
+        function runTemplateLiterals() {
+            const name = "Alice";
+            const age = 25;
+            const msg1 = "Hello, " + name + "! You are " + age + " years old.";
+            const msg2 = `Hello, ${name}! You are ${age} years old.`;
+            const sumStr = `Sum: ${5 + 3}`;
+            const upperStr = `Upper: ${name.toUpperCase()}`;
+            document.getElementById('out-template').textContent = 
+                `Old way: ${msg1}\nTemplate literal: ${msg2}\nExpression: ${sumStr}\nExpression: ${upperStr}`;
+        }
+
+        function runDestructuring() {
+            const colors = ["red", "green", "blue"];
+            const [first, second, third] = colors;
+            const [, , thirdColor] = colors;
+
+            const person = { name: "Bob", age: 30, city: "Mumbai" };
+            const { name, age } = person;
+            const { name: fullName } = person;
+            const { country = "India" } = person;
+
+            document.getElementById('out-destruct').textContent = 
+                `Array: first=${first}, second=${second}, third=${third}\nSkipped: thirdColor=${thirdColor}\nObject: name=${name}, age=${age}\nRenamed: fullName=${fullName}\nDefault: country=${country}`;
+        }
+
+        function runSpreadRest() {
+            const arr1 = [1, 2, 3];
+            const arr2 = [4, 5, 6];
+            const combined = [...arr1, ...arr2];
+            const copy = [...arr1];
+            const obj1 = { a: 1, b: 2 };
+            const obj2 = { ...obj1, c: 3 };
+
+            function sum(...numbers) {
+                return numbers.reduce((total, n) => total + n, 0);
+            }
+            const [head, ...tail] = [10, 20, 30, 40];
+
+            document.getElementById('out-spread').textContent = 
+                `Spread array: [${combined.join(', ')}]\nSpread obj: ${JSON.stringify(obj2)}\nRest sum(1,2,3,4): ${sum(1, 2, 3, 4)}\nRest destructuring: head=${head}, tail=[${tail.join(', ')}]`;
+        }
+
+        function runDefaultParams() {
+            function greet(name = "Guest", greeting = "Hello") {
+                return `${greeting}, ${name}!`;
+            }
+            document.getElementById('out-default').textContent = 
+                `greet(): "${greet()}"\ngreet("Alice"): "${greet("Alice")}"\ngreet("Bob", "Hi"): "${greet("Bob", "Hi")}"`;
+        }
+
+        function runClasses() {
+            class Animal {
+                constructor(name, sound) {
+                    this.name = name;
+                    this.sound = sound;
+                }
+                speak() { return `${this.name} says ${this.sound}`; }
+                static info() { return "Animals are living beings."; }
+            }
+            class Dog extends Animal {
+                constructor(name) { super(name, "Woof"); }
+                fetch() { return `${this.name} is fetching the ball.`; }
+            }
+            const dog = new Dog("Rex");
+            document.getElementById('out-classes').textContent = 
+                `dog.speak(): "${dog.speak()}"\ndog.fetch(): "${dog.fetch()}"\nAnimal.info(): "${Animal.info()}"`;
+        }
+
+        async function runPromises() {
+            const out = document.getElementById('out-promises');
+            out.textContent = "Waiting 1 second for promise to resolve...";
+            const fetchData = () => new Promise(res => setTimeout(() => res("Data loaded successfully!"), 1000));
+            
+            const data = await fetchData();
+            out.textContent = `Promise resolved with:\n${data}`;
+        }
+
+        function runEnhancedObjects() {
+            const name = "Alice";
+            const age = 25;
+            const person = { name, age };
+            const calculator = {
+                add(a, b) { return a + b; },
+                subtract(a, b) { return a - b; }
+            };
+            const key = "dynamicKey";
+            const obj = { [key]: "value" };
+
+            document.getElementById('out-objects').textContent = 
+                `Shorthand properties: person = ${JSON.stringify(person)}\nShorthand method add(5, 3): ${calculator.add(5, 3)}\nShorthand method subtract(5, 3): ${calculator.subtract(5, 3)}\nComputed property: obj.${key} = "${obj[key]}"`;
+        }
+    </script>
+</body>
+</html>

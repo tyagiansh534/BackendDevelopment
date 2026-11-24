@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part B: DOM Manipulation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="../index.html" class="back-link">&larr; Back to Main Index</a>
+    <h1>Experiment 07 & 08: Part B - DOM Manipulation</h1>
+    <p>Explore all the DOM manipulation methods directly based on the experiment document.</p>
+
+    <!-- 4.2 Selecting Elements -->
+    <div class="demo-card">
+        <h2>4.2 Selecting Elements</h2>
+        <div id="container" style="border: 1px solid #cbd5e1; padding: 10px; margin: 10px 0; border-radius: 4px;">
+            <p class="text">First paragraph</p>
+            <p class="text">Second paragraph</p>
+        </div>
+        <button onclick="demoSelectingElements()">Run Element Selection</button>
+        <div id="log-4-2" class="console-box">Click button to run selection code...</div>
+    </div>
+
+    <!-- 4.3 Modifying Content -->
+    <div class="demo-card">
+        <h2>4.3 Modifying Content</h2>
+        <h3 id="demoHeading">Original Heading</h3>
+        <button onclick="demoModifyingContent('textContent')">heading.textContent</button>
+        <button onclick="demoModifyingContent('innerHTML')">heading.innerHTML</button>
+        <button onclick="demoModifyingContent('innerText')">heading.innerText</button>
+    </div>
+
+    <!-- 4.4 Modifying Attributes -->
+    <div class="demo-card">
+        <h2>4.4 Modifying Attributes</h2>
+        <p>Current Link: <a id="demoLink" href="#">Sample Link</a></p>
+        <button onclick="demoModifyingAttributes()">setAttribute('href', ...)</button>
+        <button onclick="demoRemoveAttribute()">removeAttribute('target')</button>
+        <div id="log-4-4" class="console-box">Click button to inspect attribute operations...</div>
+    </div>
+
+    <!-- 4.5 Modifying Styles -->
+    <div class="demo-card">
+        <h2>4.5 Modifying Styles</h2>
+        <div class="box">Styled Box</div>
+        <button onclick="demoInlineStyles()">Apply Inline Styles</button>
+        <button onclick="demoClassList('add')">classList.add('highlight')</button>
+        <button onclick="demoClassList('remove')">classList.remove('highlight')</button>
+        <button onclick="demoClassList('toggle')">classList.toggle('active')</button>
+        <div id="log-4-5" class="console-box">Click class buttons to check class state...</div>
+    </div>
+
+    <!-- 4.6 & 4.7 Creating, Adding, and Removing Elements -->
+    <div class="demo-card">
+        <h2>4.6 Creating & Adding Elements &amp; 4.7 Removing Elements</h2>
+        <div id="cardContainer" style="border: 1px dashed #cbd5e1; padding: 10px; min-height: 60px; border-radius: 4px;">
+            <div class="card remove-me">Initial Card (has class 'remove-me')</div>
+        </div>
+        <div style="margin-top: 10px;">
+            <button onclick="demoCreateAndAppend()">appendChild()</button>
+            <button onclick="demoInsertBefore()">insertBefore()</button>
+            <button onclick="demoModernInsertion('append')">append()</button>
+            <button onclick="demoModernInsertion('prepend')">prepend()</button>
+            <button onclick="demoElementRemove()">Modern: element.remove()</button>
+            <button onclick="demoRemoveChild()">Old: parentNode.removeChild()</button>
+        </div>
+    </div>
+
+    <!-- 4.8 Traversing the DOM -->
+    <div class="demo-card">
+        <h2>4.8 Traversing the DOM</h2>
+        <ul id="traverseList" style="background: #f8fafc; padding: 15px 30px; border: 1px solid #e2e8f0; border-radius: 4px;">
+            <li>First Child Item</li>
+            <li id="middleItem" style="font-weight: bold; color: #2563eb;">Middle Item (Selected: #middleItem)</li>
+            <li>Last Child Item</li>
+        </ul>
+        <button onclick="demoTraverse()">Traverse from #middleItem</button>
+        <div id="log-4-8" class="console-box">Click button to traverse DOM relations...</div>
+    </div>
+
+    <script src="dom_demo.js"></script>
+</body>
+</html>

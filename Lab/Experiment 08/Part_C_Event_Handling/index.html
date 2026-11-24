@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part C: Event Handling</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="../index.html" class="back-link">&larr; Back to Main Index</a>
+    <h1>Experiment 07 & 08: Part C - Event Handling</h1>
+    <p>Explore events, bubbling, propagation, delegation, and form handling directly based on the experiment document.</p>
+
+    <!-- 5.2 Three Ways to Attach Event Handlers -->
+    <div class="demo-card">
+        <h2>5.2 Three Ways to Attach Event Handlers</h2>
+        <!-- Method 1: HTML attribute -->
+        <button onclick="alert('Clicked! (Method 1: HTML attribute onclick)')">Method 1: HTML attribute</button>
+        <!-- Method 2: DOM property -->
+        <button id="domPropBtn">Method 2: DOM property (btn.onclick)</button>
+        <!-- Method 3: addEventListener -->
+        <button id="addEventBtn">Method 3: addEventListener()</button>
+        <div id="log-5-2" class="console-box">Click any button above to see behavior...</div>
+    </div>
+
+    <!-- 5.4 The Event Object -->
+    <div class="demo-card">
+        <h2>5.4 The Event Object</h2>
+        <button id="eventObjBtn">Click Me to Inspect Event Object</button>
+        <div id="log-5-4" class="console-box">Click the button to inspect type, target, coordinates, and timestamp...</div>
+    </div>
+
+    <!-- 5.5 Keyboard Events -->
+    <div class="demo-card">
+        <h2>5.5 Keyboard Events</h2>
+        <input type="text" id="keyInput" placeholder="Click here and press any key...">
+        <div id="log-5-5" class="console-box">Press keys in the input field above to see key, code, ctrlKey, shiftKey...</div>
+    </div>
+
+    <!-- 5.6 Form Events -->
+    <div class="demo-card">
+        <h2>5.6 Form Events</h2>
+        <form id="myForm">
+            <input type="text" id="username" placeholder="Enter username..." required>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="liveInputPreview" style="margin-top: 8px; font-weight: bold; color: #2563eb;">Current value: ""</div>
+        <div id="log-5-6" class="console-box">Form submission logs (preventDefault prevents page reload)...</div>
+    </div>
+
+    <!-- 5.7 Event Bubbling -->
+    <div class="demo-card">
+        <h2>5.7 Event Bubbling</h2>
+        <p>Click the inner button and notice both inner and outer listeners fire (event bubbles up):</p>
+        <div id="outer" class="outer-box">
+            <strong>#outer container (Orange)</strong><br><br>
+            <button id="inner">#inner button (Click Me)</button>
+        </div>
+        <div id="log-5-7" class="console-box">Click inner button to see bubbling sequence...</div>
+    </div>
+
+    <!-- 5.8 stopPropagation() and preventDefault() -->
+    <div class="demo-card">
+        <h2>5.8 stopPropagation() &amp; preventDefault()</h2>
+        <div id="outerStop" class="outer-box">
+            <strong>#outerStop container</strong><br><br>
+            <button id="innerStop">#innerStop (calls event.stopPropagation())</button>
+        </div>
+        <br>
+        <a id="preventLink" href="https://example.com" style="color: #2563eb; font-weight: bold;">Link with event.preventDefault() (does not navigate)</a>
+        <div id="log-5-8" class="console-box">Click button or link to see behavior...</div>
+    </div>
+
+    <!-- 5.9 Event Delegation -->
+    <div class="demo-card">
+        <h2>5.9 Event Delegation</h2>
+        <p>A single click listener on <code>#taskList</code> listens for clicks on any <code>&lt;li&gt;</code>:</p>
+        <button onclick="addDelegatedTask()">+ Add New Task to List</button>
+        <ul id="taskList" class="interactive-list" style="margin-top: 15px;">
+            <li>Task 1 (Click to strike-through)</li>
+            <li>Task 2 (Click to strike-through)</li>
+            <li>Task 3 (Click to strike-through)</li>
+        </ul>
+        <div id="log-5-9" class="console-box">Click any task to toggle .done class via delegation...</div>
+    </div>
+
+    <script src="events_demo.js"></script>
+</body>
+</html>
