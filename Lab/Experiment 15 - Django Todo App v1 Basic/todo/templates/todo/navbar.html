@@ -1,0 +1,12 @@
+<header class="navbar">
+    <div class="nav-content">
+        <a href="{% url 'task_list' %}" class="brand">
+            <span class="icon">📝</span>
+            <span class="title">Django Todo v1</span>
+        </a>
+        <nav class="nav-links">
+            <a href="{% url 'task_list' %}" class="nav-link">Task List</a>
+            <a href="{% url 'add_task' %}" class="nav-btn">+ Add Task</a>
+        </nav>
+    </div>
+</header>

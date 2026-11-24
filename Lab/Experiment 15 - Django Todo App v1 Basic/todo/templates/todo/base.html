@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Django To-Do Application{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'todo/style.css' %}">
+</head>
+<body>
+    {% include 'todo/navbar.html' %}
+
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <p>Experiment 15: Django To-Do App (v1 Basic) | Author: Ansh Tyagi (SAP ID: 590014867)</p>
+    </footer>
+</body>
+</html>

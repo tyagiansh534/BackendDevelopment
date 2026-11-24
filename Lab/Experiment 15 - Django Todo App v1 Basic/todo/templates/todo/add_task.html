@@ -1,0 +1,23 @@
+{% extends 'todo/base.html' %}
+
+{% block title %}Add Task | Django Todo{% endblock %}
+
+{% block content %}
+<div class="card form-card">
+    <h2>Create a New Task</h2>
+    <p class="subtitle">Enter the details for your new task below.</p>
+
+    <form method="post" action="{% url 'add_task' %}">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="title">Task Title</label>
+            <input type="text" id="title" name="title" placeholder="e.g., Complete Backend Experiment 15" required autofocus>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn-primary">Save Task</button>
+            <a href="{% url 'task_list' %}" class="btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}
