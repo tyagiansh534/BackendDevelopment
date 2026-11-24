@@ -1,0 +1,13 @@
+{
+  "name": "lecture-8-ssr-ejs",
+  "version": "1.0.0",
+  "description": "Lecture 8 Part B: Server-Side Rendering with Node, Express, and EJS",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.19.2"
+  }
+}

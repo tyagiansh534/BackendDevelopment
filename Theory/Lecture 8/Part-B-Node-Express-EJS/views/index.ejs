@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="brand">🚀 Lecture 8 SSR Portal</div>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/students">Students Directory</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1><%= heading %></h1>
+        <p class="subtitle">Demonstrating HTML generation on the server before sending to client.</p>
+
+        <div class="card">
+            <h3>Student Profile</h3>
+            <p><strong>Name:</strong> <%= author %></p>
+            <p><strong>SAP ID:</strong> <%= sapId %></p>
+            <p><strong>Course:</strong> Backend Development (Theory Unit 1 L08)</p>
+            <a href="/students" class="btn">View Students List &rarr;</a>
+        </div>
+    </main>
+</body>
+</html>

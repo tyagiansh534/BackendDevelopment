@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="brand">🚀 Lecture 8 SSR Portal</div>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/students">Students Directory</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Rendered Students List</h1>
+        <p class="subtitle">Dynamically evaluated on server using EJS loops.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>SAP ID</th>
+                    <th>Course</th>
+                    <th>GPA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% students.forEach(student => { %>
+                    <tr>
+                        <td><%= student.id %></td>
+                        <td><strong><%= student.name %></strong></td>
+                        <td><%= student.sapId %></td>
+                        <td><%= student.course %></td>
+                        <td><%= student.gpa %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+        <br>
+        <a href="/" class="btn">&larr; Back to Home</a>
+    </main>
+</body>
+</html>
