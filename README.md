@@ -47,3 +47,8 @@
 - **[docker-bind](Theory/docker-bind/README.md)** ([📄 README](Theory/docker-bind/README.md)): Docker Bind Mount demonstration for live host-to-container filesystem synchronization.
 - **[docker-build](Theory/docker-build/README.md)** ([📄 README](Theory/docker-build/README.md)): Custom Dockerfile building and Docker Compose orchestration for an Nginx web server.
 - **[express-project](Theory/express-project/README.md)** ([📄 README](Theory/express-project/README.md)): Standalone Express.js boilerplate setup with logging middleware and REST endpoints.
+
+---
+
+### 🚀 PBL Assignment (`PBL/`)
+- **[PBL Assignment](PBL/README.md)** ([📄 README](PBL/README.md)): Containerizing a FastAPI Student Management Service, automated testing (`automationTesting.py`), CI/CD pipeline via GitHub Actions to Docker Hub, horizontal multi-container scaling, and Nginx load balancing.
