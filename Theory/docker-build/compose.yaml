@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    image: custom-nginx-backend:latest
+    container_name: backend_nginx_container
+    ports:
+      - "8080:80"
+    restart: always

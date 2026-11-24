@@ -1,0 +1,5 @@
+Hello from Host Machine!
+Author: Ansh Tyagi (SAP ID: 590014867)
+Course: Backend Development (Theory Unit 4 Docker Hands-on)
+This file is mounted directly into a running Docker container via a Bind Mount.
+Any changes made to this file on the host are immediately reflected inside the container.
