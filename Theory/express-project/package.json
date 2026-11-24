@@ -1,0 +1,12 @@
+{
+  "name": "express-project",
+  "version": "1.0.0",
+  "description": "Introduction to Express.js: Basic REST API Boilerplate",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
