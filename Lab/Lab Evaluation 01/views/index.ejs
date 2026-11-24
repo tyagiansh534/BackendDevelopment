@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eisenhower Todo</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .matrix { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+        .quadrant { border: 2px solid #333; padding: 15px; }
+        .task { border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; background-color: #f9f9f9; }
+        .task h4 { margin: 0 0 5px 0; }
+        .task p { margin: 0 0 10px 0; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <h1>Eisenhower Todo Matrix</h1>
+    <a href="/tasks/new" style="padding: 10px; background: #007bff; color: white; text-decoration: none;">+ Add New Task</a>
+
+    <div class="matrix">
+        <!-- Quadrant 1 -->
+        <div class="quadrant">
+            <h2 style="color: red;">Do (Urgent & Important)</h2>
+            <% matrix.q1_do.forEach(function(task) { %>
+                <div class="task">
+                    <h4><%= task.title %></h4>
+                    <p><%= task.description %></p>
+                    <form action="/tasks/<%= task.id %>/delete" method="POST">
+                        <button type="submit">Delete</button>
+                    </form>
+                </div>
+            <% }); %>
+            <% if(matrix.q1_do.length === 0) { %><p>No tasks.</p><% } %>
+        </div>
+
+        <!-- Quadrant 2 -->
+        <div class="quadrant">
+            <h2 style="color: blue;">Schedule (Not Urgent & Important)</h2>
+            <% matrix.q2_schedule.forEach(function(task) { %>
+                <div class="task">
+                    <h4><%= task.title %></h4>
+                    <p><%= task.description %></p>
+                    <form action="/tasks/<%= task.id %>/delete" method="POST">
+                        <button type="submit">Delete</button>
+                    </form>
+                </div>
+            <% }); %>
+            <% if(matrix.q2_schedule.length === 0) { %><p>No tasks.</p><% } %>
+        </div>
+
+        <!-- Quadrant 3 -->
+        <div class="quadrant">
+            <h2 style="color: orange;">Delegate (Urgent & Not Important)</h2>
+            <% matrix.q3_delegate.forEach(function(task) { %>
+                <div class="task">
+                    <h4><%= task.title %></h4>
+                    <p><%= task.description %></p>
+                    <form action="/tasks/<%= task.id %>/delete" method="POST">
+                        <button type="submit">Delete</button>
+                    </form>
+                </div>
+            <% }); %>
+            <% if(matrix.q3_delegate.length === 0) { %><p>No tasks.</p><% } %>
+        </div>
+
+        <!-- Quadrant 4 -->
+        <div class="quadrant">
+            <h2 style="color: gray;">Eliminate (Not Urgent & Not Important)</h2>
+            <% matrix.q4_eliminate.forEach(function(task) { %>
+                <div class="task">
+                    <h4><%= task.title %></h4>
+                    <p><%= task.description %></p>
+                    <form action="/tasks/<%= task.id %>/delete" method="POST">
+                        <button type="submit">Delete</button>
+                    </form>
+                </div>
+            <% }); %>
+            <% if(matrix.q4_eliminate.length === 0) { %><p>No tasks.</p><% } %>
+        </div>
+    </div>
+</body>
+</html>

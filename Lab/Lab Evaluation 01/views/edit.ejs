@@ -1,0 +1,137 @@
+<%- include('partials/header') %>
+
+<div class="container">
+  <div class="form-card">
+    <div class="form-header">
+      <h2>Edit Task</h2>
+      <p>Modify task attributes, urgency, importance, due date, or category.</p>
+    </div>
+
+    <% if (error) { %>
+      <div class="alert alert-danger">
+        <span>⚠️</span>
+        <div><%= error %></div>
+      </div>
+    <% } %>
+
+    <form action="/tasks/<%= task.id %>/edit" method="POST" id="edit-task-form">
+      <div class="form-group">
+        <label for="title" class="form-label">Task Title <span class="required">*</span></label>
+        <input 
+          type="text" 
+          id="title" 
+          name="title" 
+          class="form-input" 
+          placeholder="e.g. Prepare presentation" 
+          value="<%= task.title || '' %>" 
+          required 
+          autofocus
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="description" class="form-label">Description</label>
+        <textarea 
+          id="description" 
+          name="description" 
+          class="form-textarea" 
+          placeholder="Add extra notes..."
+        ><%= task.description || '' %></textarea>
+      </div>
+
+      <div class="matrix-toggles-grid">
+        <label class="toggle-card">
+          <input 
+            type="checkbox" 
+            id="isUrgent" 
+            name="isUrgent" 
+            <%= (task.is_urgent || task.isUrgent) ? 'checked' : '' %>
+            onchange="updateQuadrantPreview()"
+          >
+          <div class="toggle-content">
+            <strong>⚡ Is Urgent?</strong>
+            <span>Requires immediate action.</span>
+          </div>
+        </label>
+
+        <label class="toggle-card">
+          <input 
+            type="checkbox" 
+            id="isImportant" 
+            name="isImportant" 
+            <%= (task.is_important || task.isImportant) ? 'checked' : '' %>
+            onchange="updateQuadrantPreview()"
+          >
+          <div class="toggle-content">
+            <strong>🎯 Is Important?</strong>
+            <span>High impact on long-term goals.</span>
+          </div>
+        </label>
+      </div>
+
+      <!-- Live Quadrant Destination Indicator -->
+      <div class="quadrant-preview-box">
+        <span class="preview-label">Current Quadrant:</span>
+        <span id="preview-badge" class="preview-target badge-q4">Q4: Eliminate / Drop</span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+        <div class="form-group" style="margin-bottom: 0;">
+          <label for="category" class="form-label">Category / Tag</label>
+          <input 
+            type="text" 
+            id="category" 
+            name="category" 
+            class="form-input" 
+            placeholder="e.g. Work, Study" 
+            value="<%= task.category || '' %>"
+          >
+        </div>
+
+        <div class="form-group" style="margin-bottom: 0;">
+          <label for="due_date" class="form-label">Due Date</label>
+          <input 
+            type="date" 
+            id="due_date" 
+            name="due_date" 
+            class="form-input" 
+            value="<%= formatDate(task.due_date) || '' %>"
+          >
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <a href="/tasks" class="btn btn-secondary">Cancel</a>
+        <button type="submit" class="btn btn-primary" id="btn-save-task">
+          <span>💾</span> Save Changes
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+  function updateQuadrantPreview() {
+    const isUrgent = document.getElementById('isUrgent').checked;
+    const isImportant = document.getElementById('isImportant').checked;
+    const previewBadge = document.getElementById('preview-badge');
+
+    if (isUrgent && isImportant) {
+      previewBadge.className = 'preview-target badge-q1';
+      previewBadge.textContent = 'Q1: Do First (Urgent & Important)';
+    } else if (!isUrgent && isImportant) {
+      previewBadge.className = 'preview-target badge-q2';
+      previewBadge.textContent = 'Q2: Schedule (Important)';
+    } else if (isUrgent && !isImportant) {
+      previewBadge.className = 'preview-target badge-q3';
+      previewBadge.textContent = 'Q3: Delegate (Urgent)';
+    } else {
+      previewBadge.className = 'preview-target badge-q4';
+      previewBadge.textContent = 'Q4: Eliminate / Drop (Neither)';
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', updateQuadrantPreview);
+</script>
+
+<%- include('partials/footer') %>

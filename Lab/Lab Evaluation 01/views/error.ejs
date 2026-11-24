@@ -1,0 +1,12 @@
+<%- include('partials/header') %>
+
+<div class="container" style="padding: 4rem 1rem; text-align: center;">
+  <div class="form-card" style="margin: 0 auto;">
+    <div style="font-size: 3rem; margin-bottom: 1rem;">⚠️</div>
+    <h2 style="margin-bottom: 1rem; color: var(--q1-color);">Something Went Wrong</h2>
+    <p style="color: var(--text-secondary); margin-bottom: 2rem;"><%= error || 'An unexpected error occurred.' %></p>
+    <a href="/tasks" class="btn btn-primary">Return to Matrix</a>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

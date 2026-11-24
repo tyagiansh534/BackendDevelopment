@@ -19,6 +19,7 @@
 - **[Experiment 12 - B](Lab/experiment%2012-B/README.md)** ([📄 README](Lab/experiment%2012-B/README.md)): Express.js Session & Cookie management examples and Todo application.
 - **[Experiment 13 - A](Lab/experiment%2013%20a/README.md)** ([📄 README](Lab/experiment%2013%20a/README.md)): Express.js & MongoDB / Mongoose User Management System (Schema design, CRUD operations, Signup, and Login).
 - **[Experiment 15 - Django Todo App v1 Basic](Lab/Experiment%2015%20-%20Django%20Todo%20App%20v1%20Basic/README.md)** ([📄 README](Lab/Experiment%2015%20-%20Django%20Todo%20App%20v1%20Basic/README.md)): Full-featured database-driven To-Do application built with Python Django (MVT pattern), SQLite, modular templates (`{% extends %}`, `{% include %}`), and static files.
+- **[Lab Evaluation 01](Lab/Lab%20Evaluation%2001/README.md)** ([📄 README](Lab/Lab%20Evaluation%2001/README.md)): Eisenhower Todo Web Application built with Node.js, Express.js, EJS templates, and PostgreSQL (4-quadrant task prioritization, category filtering, search, and full CRUD).
 
 ---
 
