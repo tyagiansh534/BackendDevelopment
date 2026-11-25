@@ -1,0 +1,12 @@
+{
+  "name": "student-api-express",
+  "version": "1.0.0",
+  "description": "Student API using Express for Dockerization",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

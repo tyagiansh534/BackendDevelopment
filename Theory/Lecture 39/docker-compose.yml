@@ -1,0 +1,18 @@
+services:
+  fastapi-service:
+    build:
+      context: ./fastapi-app
+      dockerfile: Dockerfile
+    container_name: student-fastapi-service
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  express-service:
+    build:
+      context: ./express-app
+      dockerfile: Dockerfile
+    container_name: student-express-service
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
