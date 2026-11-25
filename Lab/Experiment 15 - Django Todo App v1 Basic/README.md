@@ -16,8 +16,8 @@ To install, set up, and develop a full-featured, database-driven **To-Do Applica
 - **Model-View-Template (MVT):**
   - **Model (`todo/models.py`):** `Task` model with `title` (CharField), `completed` (BooleanField), and `created_at` (DateTimeField).
   - **Views (`todo/views.py`):** Functions handling task listing (`task_list`), creation (`add_task`), status toggling (`toggle_task`), and deletion (`delete_task`).
-  - **Templates (`todo/templates/todo/`):** Modular templates showcasing template inheritance (`{% extends 'todo/base.html' %}`) and partial inclusions (`{% include 'todo/navbar.html' %}`).
-  - **Static Files (`todo/static/todo/`):** Custom CSS loaded via `{% load static %}`.
+  - **Templates (`todo/templates/todo/`):** Modular templates showcasing template inheritance (`extends 'todo/base.html'`) and partial inclusions (`include 'todo/navbar.html'`).
+  - **Static Files (`todo/static/todo/`):** Custom CSS loaded via `load static`.
 - **Django ORM & Migrations:** Schema generated using `makemigrations` and applied with `migrate`.
 - **Admin Interface (`todo/admin.py`):** Model registered with custom filters and search capabilities.
 

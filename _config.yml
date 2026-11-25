@@ -1,0 +1,13 @@
+title: Backend Development Portfolio
+description: Lab Experiments, Theory Lectures, Assignments & PBL Project by Ansh Tyagi (SAP ID 590014867)
+theme: jekyll-theme-primer
+markdown: kramdown
+kramdown:
+  input: GFM
+exclude:
+  - node_modules
+  - vendor
+  - .github
+  - db.sqlite3
+  - "*.db"
+  - "*.sqlite3"
