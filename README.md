@@ -2,53 +2,62 @@
 
 **Author:** Ansh Tyagi  
 **SAP ID:** 590014867  
+**Repository:** [https://github.com/tyagiansh534/BackendDevelopment](https://github.com/tyagiansh534/BackendDevelopment)
 
 ---
 
 ## 📁 Repository Structure
 
 ### 🧪 Lab Experiments (`Lab/`)
-- **[Experiment -1](Lab/Experiment%20-1/README.md)** ([📄 README](Lab/Experiment%20-1/README.md)): Basic HTML portfolio & assignment page.
-- **[Experiment 05](Lab/Experiment%2005/README.md)** ([📄 README](Lab/Experiment%2005/README.md)): Programs to demonstrate JavaScript array, object and functions (String/Array/Object manipulation methods and in-memory Library Management PBL utility).
-- **[Experiment 07](Lab/Experiment%2007/README.md)** ([📄 README](Lab/Experiment%2007/README.md)): Programs to familiarise ES6 concepts (let/const, arrow functions, template literals, destructuring, spread/rest, default parameters, classes, modules, promises/async-await).
-- **[Experiment 08](Lab/Experiment%2008/README.md)** ([📄 README](Lab/Experiment%2008/README.md)): Programs to demonstrate DOM and event handling (DOM element selection, modification, styles, traversal, event listeners, bubbling, delegation, and interactive To-Do application).
-- **[Experiment 09](Lab/Experiment%2009/README.md)** ([📄 README](Lab/Experiment%2009/README.md)): Programs using AJAX with HTML, XML and JSON data (Fetch API, DOMParser, dynamic partial rendering).
-- **[Experiment 10](Lab/Experiment%2010/README.md)** ([📄 README](Lab/Experiment%2010/README.md)): Programs to familiarize jQuery (DOM selectors, styling, animations/effects, and $.ajax / $.getJSON asynchronous retrieval).
-- **[Experiment 11](Lab/Experiment%2011/README.md)** ([📄 README](Lab/Experiment%2011/README.md)): Interactive Academic Portal website built with HTML5, CSS3, JavaScript and AJAX (dual JSON/XML source toggling, live client-side search & filtering, on-demand course catalogs).
-- **[Experiment 12 - A](Lab/experiment%2012%20-%20A/README.md)** ([📄 README](Lab/experiment%2012%20-%20A/README.md)): Express.js MVC web application with EJS view templating (Home, Users, Profile, Register, Results, Timetable).
-- **[Experiment 12 - B](Lab/experiment%2012-B/README.md)** ([📄 README](Lab/experiment%2012-B/README.md)): Express.js Session & Cookie management examples and Todo application.
-- **[Experiment 13 - A](Lab/experiment%2013%20a/README.md)** ([📄 README](Lab/experiment%2013%20a/README.md)): Express.js & MongoDB / Mongoose User Management System (Schema design, CRUD operations, Signup, and Login).
-- **[Experiment 15 - Django Todo App v1 Basic](Lab/Experiment%2015%20-%20Django%20Todo%20App%20v1%20Basic/README.md)** ([📄 README](Lab/Experiment%2015%20-%20Django%20Todo%20App%20v1%20Basic/README.md)): Full-featured database-driven To-Do application built with Python Django (MVT pattern), SQLite, modular templates (`{% extends %}`, `{% include %}`), and static files.
-- **[Lab Evaluation 01](Lab/Lab%20Evaluation%2001/README.md)** ([📄 README](Lab/Lab%20Evaluation%2001/README.md)): Eisenhower Todo Web Application built with Node.js, Express.js, EJS templates, and PostgreSQL (4-quadrant task prioritization, category filtering, search, and full CRUD).
+- **[Experiment -1](Lab/Experiment%20-1/README.md)**: Basic HTML5 elements & portfolio page.
+- **[Experiment 05](Lab/Experiment%2005/README.md)**: JavaScript arrays, objects, functions, and Library Management utility.
+- **[Experiment 07](Lab/Experiment%2007/README.md)**: ES6 concepts (let/const, arrow functions, destructuring, classes, modules).
+- **[Experiment 08](Lab/Experiment%2008/README.md)**: DOM manipulation, event listeners, bubbling, delegation, and interactive To-Do application.
+- **[Experiment 09](Lab/Experiment%2009/README.md)**: AJAX with HTML, XML, and JSON data (Fetch API, DOMParser, partial rendering).
+- **[Experiment 10](Lab/Experiment%2010/README.md)**: jQuery selectors, DOM manipulation, animations, and `$.ajax` / `$.getJSON`.
+- **[Experiment 11](Lab/Experiment%2011/README.md)**: Interactive Academic Portal with HTML5, CSS3, JavaScript, and dynamic XML/JSON catalogs.
+- **[Experiment 12 - A](Lab/experiment%2012%20-%20A/README.md)**: Express.js MVC web application with EJS view templating.
+- **[Experiment 12 - B](Lab/experiment%2012-B/README.md)**: Express.js Session & Cookie state management and Todo app.
+- **[Experiment 13 - A](Lab/experiment%2013%20a/README.md)**: MongoDB & Mongoose User Authentication with Express.js.
+- **[Experiment 13 B - Express Mongoose Todo App](Lab/Experiment%2013%20B%20-%20Express%20Mongoose%20Todo%20App/README.md)**: Full-featured Express + Mongoose User Registration, Login (JWT auth), and Todo management API.
+- **[Experiment 15 - Django Todo App v1 Basic](Lab/Experiment%2015%20-%20Django%20Todo%20App%20v1%20Basic/README.md)**: Database-driven To-Do application built with Python Django (MVT pattern) and SQLite.
+- **[Lab Evaluation 01](Lab/Lab%20Evaluation%2001/README.md)**: Eisenhower Matrix Todo App built with Node.js, Express, EJS, and PostgreSQL.
 
 ---
 
-### 📚 Theory Lectures & Assignments (`Theory/`)
-- **[Assignment-1-Notes-Manager](Theory/Assignment-1-Notes-Manager/README.md)** ([📄 README](Theory/Assignment-1-Notes-Manager/README.md)): Full-featured browser-based Notes Manager using `localStorage`, dynamic DOM rendering, editing, and filtering.
-- **[Assignment-2-PostgreSQL-JSONB](Theory/Assignment-2-PostgreSQL-JSONB/README.md)** ([📄 README](Theory/Assignment-2-PostgreSQL-JSONB/README.md)): Comprehensive implementation and analysis of PostgreSQL as SQL + NoSQL using `jsonb` (hybrid schemas, GIN indexing, containment queries, updates, and MongoDB comparisons).
-- **[L01-Node.js-Basics](Theory/L01-Node.js-Basics/README.md)** ([📄 README](Theory/L01-Node.js-Basics/README.md)):
-  - `Task-1-Hello-World`: Native Node.js HTTP server.
-  - `Task-2-Multiple-Routes`: Multi-route HTTP server.
-  - `Task-3-JSON-Data`: REST-style JSON data server with student endpoints.
-- **[L04-HTTP-Requests-and-Responses](Theory/L04-HTTP-Requests-and-Responses/README.md)** ([📄 README](Theory/L04-HTTP-Requests-and-Responses/README.md)):
-  - `Task-4-HTML-Responses`: Native HTTP server delivering styled HTML pages.
-  - `Task-5-EJS-Templating`: Express.js app using EJS dynamic templating.
-  - `Task-6-Flask-Hello-World`: Python Flask starter application.
-  - `Task-7-Flask-Routes-JSON-POST`: Python Flask API handling JSON requests and POST methods.
-  - `Task-8-DevTools`: DevTools network and HTTP inspection notes/assets.
-- **[L05-RESTful-APIs-FastAPI](Theory/L05-RESTful-APIs-FastAPI/README.md)** ([📄 README](Theory/L05-RESTful-APIs-FastAPI/README.md)): RESTful Student and Course Management APIs built with Python FastAPI, Pydantic data validation, and Uvicorn.
-- **[L06-Session-Control](Theory/L06-Session-Control/README.md)** ([📄 README](Theory/L06-Session-Control/README.md)): In-depth implementations of Express.js Sessions, Cookies, and Query Parameters.
-- **[L07-Web-Storage](Theory/L07-Web-Storage/README.md)** ([📄 README](Theory/L07-Web-Storage/README.md)): Comprehensive guide and code examples for `localStorage`, `sessionStorage`, JSON serialization, and interactive Notes Web App.
-- **[Lecture 8](Theory/Lecture%208/README.md)** ([📄 README](Theory/Lecture%208/README.md)): Server-Side Rendering and static content across Node.js/Express EJS and FastAPI Jinja2.
-- **[Lecture 13](Theory/Lecture%2013/README.md)** ([📄 README](Theory/Lecture%2013/README.md)): Relational and NoSQL Databases (PostgreSQL student schema, MongoDB queries, and SQL vs NoSQL analysis).
-- **[Lecture 14](Theory/Lecture%2014/README.md)** ([📄 README](Theory/Lecture%2014/README.md)): Database Design and Normalization (Library ER model and 1NF, 2NF, 3NF Orders decomposition).
-- **[Lecture 15](Theory/Lecture%2015/README.md)** ([📄 README](Theory/Lecture%2015/README.md)): ORM, MongoDB, and Data Validation (Embedding vs Referencing, Mongoose schemas, virtuals, and validators).
-- **[Lecture 26](Theory/Lecture%2026/README.md)** ([📄 README](Theory/Lecture%2026/README.md)): Django Student Management System API with RESTful endpoints, migrations, and SQLite.
-- **[docker-bind](Theory/docker-bind/README.md)** ([📄 README](Theory/docker-bind/README.md)): Docker Bind Mount demonstration for live host-to-container filesystem synchronization.
-- **[docker-build](Theory/docker-build/README.md)** ([📄 README](Theory/docker-build/README.md)): Custom Dockerfile building and Docker Compose orchestration for an Nginx web server.
-- **[express-project](Theory/express-project/README.md)** ([📄 README](Theory/express-project/README.md)): Standalone Express.js boilerplate setup with logging middleware and REST endpoints.
+### 📚 Theory Lectures (`Theory/`)
+- **[Lecture 03](Theory/Lecture%203/README.md)**: Setting Up Backend Development Environment (Express.js & Flask servers, HTTP request-response cycle).
+- **[L04-HTTP-Requests-and-Responses](Theory/L04-HTTP-Requests-and-Responses/README.md)**: HTTP request structure, headers, status codes, DevTools inspection, and Flask JSON endpoints.
+- **[L05-RESTful-APIs-FastAPI](Theory/L05-RESTful-APIs-FastAPI/README.md)**: RESTful Student & Course API built with FastAPI, Pydantic, and Uvicorn.
+- **[L06-Session-Control](Theory/L06-Session-Control/README.md)**: Express.js sessions, secure cookies, and query parameters.
+- **[L07-Web-Storage](Theory/L07-Web-Storage/README.md)**: Browser client storage with `localStorage`, `sessionStorage`, and JSON serialization.
+- **[Lecture 8](Theory/Lecture%208/README.md)**: Server-Side Rendering across Node.js/Express (EJS) and FastAPI (Jinja2).
+- **[Lecture 13](Theory/Lecture%2013/README.md)**: Relational & NoSQL Database fundamentals (PostgreSQL schema, MongoDB queries, comparison).
+- **[Lecture 14](Theory/Lecture%2014/README.md)**: Database Schema Design & Normalization (ER modeling, 1NF, 2NF, 3NF decomposition).
+- **[Lecture 15](Theory/Lecture%2015/README.md)**: Data Modeling, Mongoose schemas, Embedding vs Referencing, and validation.
+- **[Lecture 19](Theory/Lecture%2019/README.md)**: Implementing RESTful APIs with FastAPI, SQLite, and SQLAlchemy (CRUD, pagination, filtering).
+- **[Lecture 26](Theory/Lecture%2026/README.md)**: Django Framework fundamentals, MVT architecture, models, migrations, and REST endpoints.
+- **[Lecture 29](Theory/Lecture%2029/README.md)**: Testing & Debugging Django Applications (Django test client, parameterized endpoints, mocking external APIs with `unittest.mock`).
+- **[Lecture 37](Theory/Lecture%2037/README.md)**: Deployment Environments and Docker containerization for FastAPI (`Dockerfile`, layer caching).
+- **[Lecture 39](Theory/Lecture%2039/README.md)**: Multi-Container Deployment with Docker Compose (FastAPI and Express contract parity).
+- **[docker-bind](Theory/docker-bind/README.md)**: Host-to-container live filesystem synchronization via Docker bind mounts.
+- **[docker-build](Theory/docker-build/README.md)**: Custom Dockerfile build and Nginx containerization.
+- **[express-project](Theory/express-project/README.md)**: Express.js boilerplate setup with logging middleware.
 
 ---
 
-### 🚀 PBL Assignment (`PBL/`)
-- **[PBL Assignment](PBL/README.md)** ([📄 README](PBL/README.md)): Containerizing a FastAPI Student Management Service, automated testing (`automationTesting.py`), CI/CD pipeline via GitHub Actions to Docker Hub, horizontal multi-container scaling, and Nginx load balancing.
+### 📝 Assignments (`Theory/` & Root)
+- **[Assignment 1: Notes Manager](Theory/Assignment-1-Notes-Manager/README.md)**: Browser-based Notes Manager using `localStorage` and dynamic DOM.
+- **[Assignment 2: PostgreSQL as SQL + NoSQL](Theory/Assignment-2-PostgreSQL-JSONB/README.md)**: Working with `jsonb`, GIN indexing, containment queries, and hybrid schemas.
+- **[Assignment 3: Cloud Architecture Presentation](Assignment-3/README.md)**: Comparative presentation on AWS Lambda vs Google Cloud Run Functions (Serverless Architecture).
+
+---
+
+### 🐳 PBL (Project-Based Learning) — Production Containerization (`PBL/`)
+**Location:** [PBL/README.md](PBL/README.md)  
+A complete production-grade microservice architecture:
+- **FastAPI Student API**: CRUD endpoints, GPA analytics, and Prometheus metrics.
+- **Horizontal Scaling**: 2 replica containers (`fastapi-node-1` on port 8001, `fastapi-node-2` on port 8002).
+- **Nginx Reverse Proxy / Load Balancer**: Distributes traffic across replicas on port `8080` using round-robin.
+- **Automated Test Suite**: 10/10 automated tests (`automationTesting.py`).
+- **CI/CD Pipeline**: GitHub Actions workflow for building and pushing images to Docker Hub.
