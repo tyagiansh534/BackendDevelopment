@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 12-A: Express.js & EJS MVC | Ansh Tyagi</title>
+    <style>
+        :root { --bg: #0f172a; --card: #1e293b; --text: #f8fafc; --muted: #94a3b8; --accent: #38bdf8; --primary: #2563eb; --border: #334155; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; padding: 2rem 1rem; }
+        .container { max-width: 900px; margin: 0 auto; }
+        header { border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; margin-bottom: 2rem; }
+        .back-nav { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--accent); text-decoration: none; font-weight: 500; font-size: 0.9rem; margin-bottom: 1rem; }
+        h1 { font-size: 2rem; color: #fff; margin-bottom: 0.5rem; }
+        .meta { color: var(--muted); font-size: 0.95rem; }
+        .badge { display: inline-block; background: rgba(37,99,235,0.2); border: 1px solid var(--primary); color: var(--accent); padding: 0.2rem 0.6rem; border-radius: 9999px; font-size: 0.8rem; margin: 0.5rem 0.25rem 0 0; }
+        .card { background: var(--card); border: 1px solid var(--border); border-radius: 0.5rem; padding: 1.5rem; margin-bottom: 1.5rem; }
+        h2 { font-size: 1.3rem; color: var(--accent); margin-bottom: 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.4rem; }
+        h3 { font-size: 1.05rem; color: #e2e8f0; margin: 1rem 0 0.4rem 0; }
+        p, li { color: #cbd5e1; font-size: 0.95rem; }
+        ul { margin-left: 1.5rem; margin-bottom: 0.75rem; }
+        pre { background: #090d16; border: 1px solid var(--border); border-radius: 6px; padding: 1rem; overflow-x: auto; color: #38bdf8; font-size: 0.9rem; margin: 0.75rem 0; }
+        code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
+        .btn { display: inline-block; background: var(--primary); color: #fff; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 0.9rem; margin-top: 1rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="../../index.html" class="back-nav">&larr; Back to Portfolio</a>
+            <h1>Experiment 12-A: Express.js MVC & EJS Templating</h1>
+            <p class="meta">Author: <strong>Ansh Tyagi</strong> | SAP ID: <strong>590014867</strong> | Course: Backend Development Laboratory</p>
+            <div>
+                <span class="badge">Node.js</span>
+                <span class="badge">Express.js</span>
+                <span class="badge">EJS Templates</span>
+                <span class="badge">MVC Pattern</span>
+            </div>
+        </header>
+
+        <div class="card">
+            <h2>1. Objective</h2>
+            <p>To implement server-side web scripting using <strong>Node.js</strong> and <strong>Express.js</strong> with <strong>EJS (Embedded JavaScript)</strong> templating. Demonstrates the Model-View-Controller pattern, dynamic view rendering, route handling, and partials reuse.</p>
+        </div>
+
+        <div class="card">
+            <h2>2. Key Routes & Features Implemented</h2>
+            <ul>
+                <li><code>GET /</code> — Home landing page rendered with header and footer partials.</li>
+                <li><code>GET /users</code> — Lists all registered users dynamically passed to the EJS view.</li>
+                <li><code>GET /profile/:id</code> — Dynamic route parameter handling rendering student details.</li>
+                <li><code>GET /register</code> & <code>POST /register</code> — User registration form with URL-encoded body parsing.</li>
+                <li><code>GET /timetable</code> & <code>GET /results</code> — Academic semester timetable and grade report views.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>3. Application Structure</h2>
+            <pre><code>experiment 12 - A/
+├── app.js             # Main Express server and route controller
+├── package.json       # Dependencies (express, ejs, nodemon)
+├── public/            # Static stylesheets and assets
+│   └── css/style.css
+└── views/             # EJS Template files
+    ├── partials/      # Header, navbar, and footer components
+    │   ├── header.ejs
+    │   └── footer.ejs
+    ├── index.ejs
+    ├── users.ejs
+    ├── profile.ejs
+    └── register.ejs</code></pre>
+        </div>
+
+        <div class="card">
+            <h2>4. How to Run Locally</h2>
+            <pre><code># Navigate to directory
+cd "Lab/experiment 12 - A"
+
+# Install dependencies
+npm install
+
+# Start server
+node app.js</code></pre>
+            <p>Open <code>http://localhost:3000/</code> in your browser to view the application.</p>
+            <a href="https://github.com/tyagiansh534/BackendDevelopment/tree/main/Lab/experiment%2012%20-%20A" class="btn" target="_blank">View Source Code on GitHub &rarr;</a>
+        </div>
+    </div>
+</body>
+</html>

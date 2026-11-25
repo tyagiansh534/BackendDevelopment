@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBL: Production Containerization & Load Balancing | Ansh Tyagi</title>
+    <style>
+        :root { --bg: #0f172a; --card: #1e293b; --text: #f8fafc; --muted: #94a3b8; --accent: #38bdf8; --primary: #2563eb; --border: #334155; --success: #22c55e; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; padding: 2rem 1rem; }
+        .container { max-width: 900px; margin: 0 auto; }
+        header { border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; margin-bottom: 2rem; }
+        .back-nav { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--accent); text-decoration: none; font-weight: 500; font-size: 0.9rem; margin-bottom: 1rem; }
+        h1 { font-size: 2rem; color: #fff; margin-bottom: 0.5rem; }
+        .meta { color: var(--muted); font-size: 0.95rem; }
+        .badge { display: inline-block; background: rgba(37,99,235,0.2); border: 1px solid var(--primary); color: var(--accent); padding: 0.2rem 0.6rem; border-radius: 9999px; font-size: 0.8rem; margin: 0.5rem 0.25rem 0 0; }
+        .card { background: var(--card); border: 1px solid var(--border); border-radius: 0.5rem; padding: 1.5rem; margin-bottom: 1.5rem; }
+        h2 { font-size: 1.3rem; color: var(--accent); margin-bottom: 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.4rem; }
+        p, li { color: #cbd5e1; font-size: 0.95rem; }
+        ul { margin-left: 1.5rem; margin-bottom: 0.75rem; }
+        pre { background: #090d16; border: 1px solid var(--border); border-radius: 6px; padding: 1rem; overflow-x: auto; color: #38bdf8; font-size: 0.9rem; margin: 0.75rem 0; }
+        code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
+        .btn { display: inline-block; background: var(--primary); color: #fff; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 0.9rem; margin-top: 1rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="../index.html" class="back-nav">&larr; Back to Portfolio</a>
+            <h1>Project-Based Learning (PBL): Production Microservices</h1>
+            <p class="meta">Author: <strong>Ansh Tyagi</strong> | SAP ID: <strong>590014867</strong></p>
+            <div>
+                <span class="badge">Docker Compose</span>
+                <span class="badge">FastAPI Replicas</span>
+                <span class="badge">Nginx Load Balancing</span>
+                <span class="badge" style="border-color: var(--success); color: var(--success);">10/10 Tests Passed</span>
+            </div>
+        </header>
+
+        <div class="card">
+            <h2>1. Overview</h2>
+            <p>A production-ready microservice deployment containerizing a FastAPI Student Management application, scaled horizontally across two container replicas (<code>fastapi-node-1</code> and <code>fastapi-node-2</code>) fronted by an <strong>Nginx Reverse Proxy / Load Balancer</strong>.</p>
+        </div>
+
+        <div class="card">
+            <h2>2. Multi-Container Topology</h2>
+            <ul>
+                <li><strong>Nginx Load Balancer (Port 8080):</strong> Distributes incoming traffic across backend replicas via round-robin.</li>
+                <li><strong>FastAPI Node 1 (Port 8001 &rarr; 8000):</strong> Primary replica.</li>
+                <li><strong>FastAPI Node 2 (Port 8002 &rarr; 8000):</strong> Secondary replica.</li>
+                <li><strong>Automated Test Suite:</strong> 10 automated test cases asserting SAP ID, endpoints, headers, and CRUD.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>3. How to Run with Docker Compose</h2>
+            <pre><code>cd PBL
+docker compose up -d --build
+
+# Run automated tests:
+py automationTesting.py http://127.0.0.1:8080</code></pre>
+            <p>Access the live load balancer at <code>http://localhost:8080/</code>.</p>
+            <a href="https://github.com/tyagiansh534/BackendDevelopment/tree/main/PBL" class="btn" target="_blank">View Source Code on GitHub &rarr;</a>
+        </div>
+    </div>
+</body>
+</html>

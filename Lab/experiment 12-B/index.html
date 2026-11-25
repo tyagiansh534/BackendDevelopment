@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 12-B: State Management in Node.js | Ansh Tyagi</title>
+    <style>
+        :root { --bg: #0f172a; --card: #1e293b; --text: #f8fafc; --muted: #94a3b8; --accent: #38bdf8; --primary: #2563eb; --border: #334155; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; padding: 2rem 1rem; }
+        .container { max-width: 900px; margin: 0 auto; }
+        header { border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; margin-bottom: 2rem; }
+        .back-nav { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--accent); text-decoration: none; font-weight: 500; font-size: 0.9rem; margin-bottom: 1rem; }
+        h1 { font-size: 2rem; color: #fff; margin-bottom: 0.5rem; }
+        .meta { color: var(--muted); font-size: 0.95rem; }
+        .badge { display: inline-block; background: rgba(37,99,235,0.2); border: 1px solid var(--primary); color: var(--accent); padding: 0.2rem 0.6rem; border-radius: 9999px; font-size: 0.8rem; margin: 0.5rem 0.25rem 0 0; }
+        .card { background: var(--card); border: 1px solid var(--border); border-radius: 0.5rem; padding: 1.5rem; margin-bottom: 1.5rem; }
+        h2 { font-size: 1.3rem; color: var(--accent); margin-bottom: 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.4rem; }
+        p, li { color: #cbd5e1; font-size: 0.95rem; }
+        ul { margin-left: 1.5rem; margin-bottom: 0.75rem; }
+        pre { background: #090d16; border: 1px solid var(--border); border-radius: 6px; padding: 1rem; overflow-x: auto; color: #38bdf8; font-size: 0.9rem; margin: 0.75rem 0; }
+        code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
+        .btn { display: inline-block; background: var(--primary); color: #fff; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 0.9rem; margin-top: 1rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="../../index.html" class="back-nav">&larr; Back to Portfolio</a>
+            <h1>Experiment 12-B: State Management (Cookies & Sessions)</h1>
+            <p class="meta">Author: <strong>Ansh Tyagi</strong> | SAP ID: <strong>590014867</strong> | Course: Backend Development Laboratory</p>
+            <div>
+                <span class="badge">State Management</span>
+                <span class="badge">express-session</span>
+                <span class="badge">cookie-parser</span>
+                <span class="badge">HTTP Statelessness</span>
+            </div>
+        </header>
+
+        <div class="card">
+            <h2>1. Objective</h2>
+            <p>HTTP is a stateless protocol where each request is processed independently. This experiment demonstrates two fundamental server-side persistence techniques to track users across requests:</p>
+            <ul>
+                <li><strong>Server-Side Sessions</strong> using <code>express-session</code> (storing state securely on server with session IDs in cookies).</li>
+                <li><strong>Client-Side Cookies</strong> using <code>cookie-parser</code> (instructing client browsers to store key-value attributes).</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>2. Demonstrations Included</h2>
+            <ul>
+                <li><strong>Session Example (<code>session-example.js</code>):</strong> Tracks and increments a page view counter on every page refresh; provides a <code>/destroy</code> endpoint to safely end the session.</li>
+                <li><strong>Cookie Example (<code>cookie-example.js</code>):</strong> Sets secure cookies (<code>/set-cookie</code>), reads incoming cookie headers (<code>/get-cookie</code>), and clears cookies (<code>/clear-cookie</code>).</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>3. How to Run Locally</h2>
+            <pre><code>cd "Lab/experiment 12-B"
+npm install
+
+# Test Sessions:
+node session-example.js
+# Visit http://localhost:3000/ to see view count increase
+
+# Test Cookies:
+node cookie-example.js
+# Visit http://localhost:3000/set-cookie then http://localhost:3000/get-cookie</code></pre>
+            <a href="https://github.com/tyagiansh534/BackendDevelopment/tree/main/Lab/experiment%2012-B" class="btn" target="_blank">View Source Code on GitHub &rarr;</a>
+        </div>
+    </div>
+</body>
+</html>
