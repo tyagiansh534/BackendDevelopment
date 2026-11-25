@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend Development Portfolio | Ansh Tyagi</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --accent: #38bdf8;
+            --success: #22c55e;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+        h1 {
+            font-size: 2.2rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(37, 99, 235, 0.2);
+            color: var(--accent);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            border: 1px solid var(--primary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 0.75rem;
+        }
+        .section-title {
+            font-size: 1.4rem;
+            color: #e2e8f0;
+            margin: 2rem 0 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.25rem;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            padding: 1.25rem;
+            transition: transform 0.15s ease, border-color 0.15s ease;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent);
+        }
+        .card h3 {
+            font-size: 1.1rem;
+            color: #fff;
+            margin-bottom: 0.4rem;
+        }
+        .card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+        }
+        .card-tag {
+            font-size: 0.75rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            background: rgba(148, 163, 184, 0.1);
+            color: var(--text-muted);
+            align-self: flex-start;
+        }
+        .pbl-banner {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.15), rgba(56, 189, 248, 0.15));
+            border: 1px solid var(--primary);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .pbl-banner h2 {
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+            padding-top: 1.5rem;
+        }
+        a.repo-btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: #fff;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 1rem;
+            transition: background 0.15s;
+        }
+        a.repo-btn:hover {
+            background-color: var(--primary-dark);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Backend Development Portfolio</h1>
+            <p class="subtitle">Ansh Tyagi | SAP ID: 590014867</p>
+            <span class="badge">B.Tech Computer Science & Engineering</span>
+            <div>
+                <a href="https://github.com/tyagiansh534/BackendDevelopment" class="repo-btn" target="_blank">View on GitHub</a>
+            </div>
+        </header>
+
+        <div class="pbl-banner">
+            <h2>🐳 PBL Assignment: Production Microservices & Docker</h2>
+            <p>Scalable FastAPI Student API deployed with Nginx Reverse Proxy / Load Balancer, horizontal replicas, automated tests, and GitHub Actions CI/CD.</p>
+            <div style="margin-top: 0.75rem;">
+                <span class="badge" style="background: rgba(34, 197, 94, 0.2); border-color: var(--success); color: var(--success);">10/10 Automated Tests Passed</span>
+                <span class="badge">Docker Compose</span>
+                <span class="badge">Nginx Load Balancing</span>
+            </div>
+        </div>
+
+        <h2 class="section-title">🧪 Lab Experiments</h2>
+        <div class="grid">
+            <a href="Lab/Experiment%20-1/Experiment%20-1.html" class="card">
+                <div>
+                    <h3>Experiment 1: HTML5 Elements</h3>
+                    <p>Semantic HTML5 structure, forms, multimedia, tables, and page layout.</p>
+                </div>
+                <span class="card-tag">HTML5</span>
+            </a>
+            <a href="Lab/Experiment%2005/index.html" class="card">
+                <div>
+                    <h3>Experiment 05: JavaScript Essentials</h3>
+                    <p>Arrays, objects, functions, and Library Management utility.</p>
+                </div>
+                <span class="card-tag">JavaScript ES6</span>
+            </a>
+            <a href="Lab/Experiment%2007/index.html" class="card">
+                <div>
+                    <h3>Experiment 07: ES6 Advanced</h3>
+                    <p>Arrow functions, destructuring, classes, modules, and promises.</p>
+                </div>
+                <span class="card-tag">ES6 Modules</span>
+            </a>
+            <a href="Lab/Experiment%2008/index.html" class="card">
+                <div>
+                    <h3>Experiment 08: DOM & Events</h3>
+                    <p>DOM element selection, event listeners, bubbling, delegation, and Todo app.</p>
+                </div>
+                <span class="card-tag">DOM Manipulation</span>
+            </a>
+            <a href="Lab/Experiment%2011/index.html" class="card">
+                <div>
+                    <h3>Experiment 11: Academic Portal</h3>
+                    <p>Dynamic XML and JSON parsing with client-side course filtering.</p>
+                </div>
+                <span class="card-tag">AJAX / XML / JSON</span>
+            </a>
+            <a href="Lab/Experiment%2013%20B%20-%20Express%20Mongoose%20Todo%20App/README.md" class="card">
+                <div>
+                    <h3>Experiment 13 B: Express + Mongo Todo</h3>
+                    <p>User registration, JWT login authentication, and Mongoose Todo CRUD.</p>
+                </div>
+                <span class="card-tag">Express / MongoDB</span>
+            </a>
+            <a href="Lab/Experiment%2015%20-%20Django%20Todo%20App%20v1%20Basic/README.md" class="card">
+                <div>
+                    <h3>Experiment 15: Django Todo App</h3>
+                    <p>Database-driven To-Do application built with Python Django (MVT pattern).</p>
+                </div>
+                <span class="card-tag">Django / Python</span>
+            </a>
+            <a href="Lab/Lab%20Evaluation%2001/README.md" class="card">
+                <div>
+                    <h3>Lab Evaluation 01: Eisenhower Matrix</h3>
+                    <p>4-quadrant task prioritization web app using Node.js, Express, and PostgreSQL.</p>
+                </div>
+                <span class="card-tag">PostgreSQL / EJS</span>
+            </a>
+        </div>
+
+        <h2 class="section-title">📚 Theory Lectures & Highlights</h2>
+        <div class="grid">
+            <a href="Theory/Lecture%203/README.md" class="card">
+                <div>
+                    <h3>Lecture 03: Backend Environment</h3>
+                    <p>Express.js & Flask servers, HTTP request-response cycle.</p>
+                </div>
+                <span class="card-tag">Express / Flask</span>
+            </a>
+            <a href="Theory/Lecture%2019/README.md" class="card">
+                <div>
+                    <h3>Lecture 19: RESTful APIs</h3>
+                    <p>FastAPI, SQLAlchemy, and SQLite CRUD with Pydantic validation.</p>
+                </div>
+                <span class="card-tag">FastAPI / SQLAlchemy</span>
+            </a>
+            <a href="Theory/Lecture%2029/README.md" class="card">
+                <div>
+                    <h3>Lecture 29: Testing & Debugging</h3>
+                    <p>Django unit and integration test suite with mock patching.</p>
+                </div>
+                <span class="card-tag">Django Testing</span>
+            </a>
+            <a href="Theory/Lecture%2037/README.md" class="card">
+                <div>
+                    <h3>Lecture 37: Docker Containerization</h3>
+                    <p>FastAPI Dockerfile packaging and layer caching.</p>
+                </div>
+                <span class="card-tag">Docker</span>
+            </a>
+            <a href="Theory/Lecture%2039/README.md" class="card">
+                <div>
+                    <h3>Lecture 39: Docker Compose</h3>
+                    <p>Multi-container deployment verifying FastAPI & Express contract parity.</p>
+                </div>
+                <span class="card-tag">Docker Compose</span>
+            </a>
+            <a href="Theory/Assignment-2-PostgreSQL-JSONB/README.md" class="card">
+                <div>
+                    <h3>Assignment 2: PostgreSQL JSONB</h3>
+                    <p>PostgreSQL as SQL + NoSQL using jsonb and GIN indexing.</p>
+                </div>
+                <span class="card-tag">PostgreSQL JSONB</span>
+            </a>
+            <a href="Assignment-3/README.md" class="card">
+                <div>
+                    <h3>Assignment 3: Cloud Architecture</h3>
+                    <p>AWS Lambda vs Google Cloud Run Functions comparison.</p>
+                </div>
+                <span class="card-tag">Serverless / Cloud</span>
+            </a>
+        </div>
+
+        <footer>
+            <p>Backend Development Course Repository &copy; 2026 | Ansh Tyagi (590014867)</p>
+        </footer>
+    </div>
+</body>
+</html>
